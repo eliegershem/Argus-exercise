@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: argus-deployment
+  namespace: default
+  labels:
+    app: argus-app
+spec:
+  replicas: 1
+  selector:
+    matchLables:
+      app: argus-app
+  template:
+    metadata:
+      labels:
+        app: argus-app
+    spec:
+      containers:
+      - name: argus-exersize
+        image: eliegershem/argus-exersize
+        ports:
+        - containerPort: 8080
