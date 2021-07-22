@@ -1,0 +1,8 @@
+name: argus-app
+namespace: default
+service:
+  port: 80
+deployment:
+  replicas: 1
+  tag: "latest"
+  containerPort: 8080
