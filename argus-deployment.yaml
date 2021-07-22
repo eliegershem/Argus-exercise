@@ -8,7 +8,7 @@ metadata:
 spec:
   replicas: 1
   selector:
-    matchLables:
+    matchLabels:
       app: argus-app
   template:
     metadata:
@@ -16,7 +16,7 @@ spec:
         app: argus-app
     spec:
       containers:
-      - name: argus-exersize
-        image: eliegershem/argus-exersize
+      - name: nginx
+        image: eliegershem/argus-exersize:latest
         ports:
         - containerPort: 8080
