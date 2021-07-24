@@ -3,6 +3,7 @@ namespace: default
 service:
   port: 80
 deployment:
-  replicas: 1
+  replicas: 2
   tag: "latest"
   containerPort: 8080
+  PromPort: 9100

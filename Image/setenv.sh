@@ -1,0 +1,1 @@
+export CATALINA_OPTS=" -javaagent:/usr/local/tomcat/bin/jmx_prometheus_javaagent_java6-0.16.1.jar=9100:/usr/local/tomcat/bin/myconf.yml $CATALINA_OPTS"

@@ -8,6 +8,11 @@ spec:
   selector:
     app: "{{ .Values.name }}"
   ports:
-  - protocol: TCP
+  - name: http
+    protocol: TCP
     port: {{ .Values.service.port }}
     targetPort: {{ .Values.deployment.containerPort }}
+  - name: prom
+    protocol: TCP
+    port:  {{ .Values.deployment.PromPort }}
+    targetPort:  {{ .Values.deployment.PromPort }}

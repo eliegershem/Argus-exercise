@@ -20,3 +20,6 @@ spec:
         image: eliegershem/argus-exersize:{{ .Values.deployment.tag }}
         ports:
         - containerPort: {{ .Values.deployment.containerPort }}
+          name: http
+        - containerPort: {{ .Values.deployment.PromPort }}
+          name: prom
