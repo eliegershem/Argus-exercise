@@ -14,5 +14,6 @@ ADD setenv.sh ./bin/
 # Exposed ports
 EXPOSE 8080
 EXPOSE 9100
+EXPOSE 3100
 
 CMD ["catalina.sh", "run"]
